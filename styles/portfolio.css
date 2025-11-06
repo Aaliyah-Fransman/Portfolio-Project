@@ -23,7 +23,7 @@ h1 {
 h2 {
   font-size: 64px;
 }
-h4 {
+h3 {
   font-size: 48px;
 }
 body {
@@ -79,7 +79,7 @@ nav li.active a {
   color: 272142;
 }
 .content-container {
-  padding: 160px 20px;
+  padding: 60px 20px;
 }
 .content {
   margin: 30px;
@@ -167,10 +167,10 @@ footer .contact-box p {
   h2 {
     font-size: 44px;
   }
-  h4 {
+  h3 {
     font-size: 26px;
   }
-  
+
   .content {
     text-align: center;
     padding: 0;
@@ -180,4 +180,3 @@ footer .contact-box p {
     text-align: center;
   }
 }
-
