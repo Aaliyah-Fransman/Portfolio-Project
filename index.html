@@ -34,27 +34,31 @@
     <link rel="stylesheet" href="styles/portfolio.css" />
   </head>
   <body>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
     <div class="container">
-      <nav class="d-flex justify-content-between">
-        <a href="index.html" title="Home page">
+      <nav class="d-flex justify-content-between align-items-center">
+        <a href="index.html" title="Home page" class="logo-link">
           <img
             src="Images.png/Aaliyah.jpg"
-            class="logo d-none d-md-block"
+            class="logo d-none d-md-block rounded spin-logo"
             alt="Aaliyah Fransman"
           />
           <img
-            src="Images.png/logo-small.jpg"
-            class="logo d-block d-md-none"
+            src="Images.png/Aaliyah.jpg"
+            class="logo d-block d-md-none rounded spin-logo"
             alt="Aaliyah Fransman"
           />
         </a>
-        <ul>
+
+        <ul class="nav-links d-flex gap-2 mb-0">
           <li class="active">
-            <a href="index.html" title="Home page"> Home </a>
+            <a href="index.html" title="Home page">Home</a>
           </li>
-          <li><a href="about.html" title="About page"> About </a></li>
-          <li><a href="work.html" title="Work page"> Projects </a></li>
-          <li><a href="Contact.html" title="Contact page"> Contact </a></li>
+          <li><a href="about.html" title="About page">About</a></li>
+          <li><a href="work.html" title="Work page">Projects</a></li>
+          <li><a href="Contact.html" title="Contact page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -62,25 +66,66 @@
     <div class="hero">
       <p>Hello, I am</p>
       <h1>Aaliyah Fransman</h1>
-      <h2 class="mb-5">Front-end developer based in South Africa</h2>
+      <h2 class="mb-5">Full Stack Developer based in South Africa</h2>
       <div><a href="Contact.html" class="btn btn-branding">Contact me</a></div>
     </div>
-    <p class="text-center m-5">
-      Featured project which my best projects be choice to show
-    </p>
+
+    <div class="first_paragraph">
+      <p class="text-center mt-3 fs-5">Featured projects</p>
+    </div>
+    <div class="cube-container d-flex justify-content-center d-lg-none">
+      <div class="cube">
+        <div class="face front">
+          <img src="Images.png/Weather-img.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="face back">
+          <img
+            src="Images.png/sonnet-image.jpg"
+            class="img-fluid rounded"
+            alt="AI poem generator"
+          />
+        </div>
+        <div class="face right">
+          <img
+            src="Images.png/My-world-clock-image.jpg"
+            class="img-fluid rounded"
+            alt="World clock project"
+          />
+        </div>
+        <div class="face left">
+          <img
+            src="Images.png/Internet population image.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <br />
     <div class="container">
       <div class="row mb-5">
         <div class="col d-none d-lg-block">
-          <img src="Images.png/Weather-img.jpg" class="img-fluid" alt="" />
+          <img
+            src="Images.png/Weather-img.jpg"
+            class="img-fluid rounded"
+            alt=""
+          />
         </div>
         <div class="col">
           <div class="project-description">
             <h2 class="mb-5">Weather App Project</h2>
             <p class="mb-5 text muted">
-              Far far away, behind the world of mountains, far from countries
-              Vokalia and Consonantia, there live the blind texts. Seperated
-              they live in bookmarksgrove right at the coast of the semantics, a
-              large language ocean. A small river named Duden flows by
+              I created a live weather web application using HTML, CSS, and
+              JavaScript, powered by a real-time weather API. The app
+              dynamically displays the current weather conditions and a seven
+              day forecast, updating automatically based on live data from the
+              API. To enhance the user experience, the background of the
+              application changes according to the weather for example, showing
+              a sunny sky, clouds, or rain animations that match the live
+              conditions. This project demonstrates my ability to integrate
+              APIs, handle asynchronous JavaScript functions, and design a
+              responsive, visually engaging interface that delivers both
+              functionality and aesthetic appeal.
             </p>
             <a
               href="work.html"
@@ -98,10 +143,14 @@
           <div class="project-description">
             <h2 class="mb-5">Poem Generator Project</h2>
             <p class="mb-5 text muted">
-              Far far away, behind the world of mountains, far from countries
-              Vokalia and Consonantia, there live the blind texts. Seperated
-              they live in bookmarksgrove right at the coast of the semantics, a
-              large language ocean. A small river named Duden flows by
+              I developed an AI Poem Generator that creates a four word line
+              poem on any topic entered by the user. Built using HTML, CSS, and
+              JavaScript, and powered by a live AI API, the application
+              instantly generates original, theme based poems with each
+              submission. This project highlights my ability to integrate AI
+              driven APIs, manage real time data processing, and design an
+              intuitive, interactive front end experience that merges creativity
+              with technology.
             </p>
             <a
               href="work.html"
@@ -112,7 +161,11 @@
           </div>
         </div>
         <div class="col d-none d-lg-block">
-          <img src="Images.png/sonnet-image.jpg" class="img-fluid" alt="" />
+          <img
+            src="Images.png/sonnet-image.jpg"
+            class="img-fluid rounded"
+            alt="AI poem generator"
+          />
         </div>
       </div>
     </div>
@@ -121,7 +174,7 @@
         <div class="col d-none d-lg-block">
           <img
             src="Images.png/My-world-clock-image.jpg"
-            class="img-fluid"
+            class="img-fluid rounded"
             alt="World clock project"
           />
         </div>
@@ -129,10 +182,14 @@
           <div class="project-description">
             <h2 class="mb-5">World Clock Project</h2>
             <p class="mb-5 text muted">
-              Far far away, behind the world of mountains, far from countries
-              Vokalia and Consonantia, there live the blind texts. Seperated
-              they live in bookmarksgrove right at the coast of the semantics, a
-              large language ocean. A small river named Duden flows by
+              I developed a World Clock application using HTML, CSS, and
+              JavaScript, powered by a live API to show the current time and
+              timezone for any city selected from a drop down menu. Each city is
+              paired with a unique image, creating a visually engaging
+              experience that makes exploring global timezones more interactive
+              and enjoyable. This project highlights my skills in real time data
+              integration, API usage, and front-end design, combining practical
+              functionality with an aesthetically pleasing interface.
             </p>
             <a
               href="work.html"
@@ -148,8 +205,10 @@
           class="contact-box d-flex justify-content-between mb-5 d-none d-md-flex"
         >
           <div>
-            <h3>Work Inquiry</h3>
-            <p class="text-muted">Let's work together</p>
+            <h3>
+              Work Inquiry
+              <p>Let's work together</p>
+            </h3>
           </div>
           <div>
             <a

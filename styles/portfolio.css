@@ -28,6 +28,7 @@ h3 {
 }
 body {
   font-family: var(--default-font-family);
+  color: white;
 }
 p {
   font-family: var(--default-font-family);
@@ -37,6 +38,13 @@ p {
   font-variation-settings: "wdth" 100;
   font-size: 16px;
   line-height: 30px;
+}
+.first_paragraph {
+  font-family: var(--default-font-family);
+  color: #f9f7fe;
+  text-shadow: 0 0 10px #ffffff;
+  font-size: 70px;
+  font-weight: 700px;
 }
 nav {
   padding: 20px;
@@ -58,13 +66,26 @@ nav a {
 }
 nav a:hover,
 nav li.active a {
-  color: var(--branding-color);
+  color: #f9f7fe;
+  text-shadow: 0 0 10px #ffffff;
+  border-bottom: white solid;
 }
 
 .hero {
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    315deg,
+    black rgb(48, 92, 238) 3%,
+    rgba(255, 25, 25, 1) 38%,
+    rgb(48, 92, 238) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  opacity: 100%;
   text-align: center;
   padding: 80px 20px;
+  color: #f9f7fe;
+  text-shadow: 0 0 10px #ffffff;
+  border-top: white solid;
+  border-bottom: white solid;
 }
 .hero p {
   font-size: 36px;
@@ -78,8 +99,10 @@ nav li.active a {
   font-size: 24px;
   color: 272142;
 }
+
 .content-container {
   padding: 60px 20px;
+  border-top: white solid;
 }
 .content {
   margin: 30px;
@@ -123,15 +146,22 @@ nav li.active a {
 .logo {
   max-height: 40px;
 }
+.Projects {
+  font-size: 24px;
+  font-family: var(--default-font-family);
+  line-height: 1.5;
+  margin: 20px 0 0;
+}
 nav a {
   font-size: 12px;
 }
 footer {
   margin: 60px 0;
+  color: white;
 }
 footer .email-link {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 24px;
   text-align: center;
 }
@@ -152,12 +182,174 @@ footer .social-links a:hover {
   background: var(--branding-color);
 }
 footer .contact-box {
-  background-color: var(--secondary-color);
+  border: var(--secondary-color) solid;
   padding: 30px 120px;
   border-radius: 10px;
 }
 footer .contact-box p {
   margin: 0;
+}
+
+body {
+  margin: auto;
+  font-family: var(--default-font-family);
+  overflow-x: hidden;
+  background: linear-gradient(
+    315deg,
+    rgb(48, 92, 238) 3%,
+    rgba(255, 25, 25, 1) 38%,
+    rgb(48, 92, 238) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+.cube-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  perspective: 1000px;
+}
+
+.cube {
+  position: relative;
+  width: 70vw;
+  height: 70vw;
+  max-width: 200px;
+  max-height: 200px;
+  transform-style: preserve-3d;
+  animation: rotateYcircle 40s linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vw;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.front {
+  transform: translateZ(50vw);
+}
+.back {
+  transform: rotateY(180deg) translateZ(50vw);
+}
+.right {
+  transform: rotateY(90deg) translateZ(50vw);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(50vw);
+}
+
+@keyframes rotateYcircle {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.carousel {
+  margin: 100px auto;
+  width: 100%;
+
+  border-radius: 10px;
+  display: flex;
+
+  gap: 1em;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 30s infinite linear;
+  padding-right: 1em;
+}
+.card {
+  flex: 0 0 11em;
+  height: 11em;
+  padding: 2px;
+  font-size: 3rem;
+  border-radius: 0.2em;
+  text-align: center;
+  align-content: center;
+}
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
 @media (max-width: 960px) {
   h1 {
@@ -179,4 +371,29 @@ footer .contact-box p {
     padding: 0;
     text-align: center;
   }
+  .card {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+.cube {
+  width: 500vw;
+  height: 500vw;
+}
+.face {
+  width: 100%;
+  height: 100%;
+}
+.front {
+  transform: translateZ(150px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
 }
