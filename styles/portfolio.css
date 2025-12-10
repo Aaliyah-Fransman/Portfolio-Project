@@ -87,6 +87,7 @@ nav li.active a {
   border-top: white solid;
   border-bottom: white solid;
 }
+
 .hero p {
   font-size: 36px;
   font-weight: bold;
@@ -99,7 +100,12 @@ nav li.active a {
   font-size: 24px;
   color: 272142;
 }
-
+.CV .btn-branding {
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: -40px;
+}
 .content-container {
   padding: 60px 20px;
   border-top: white solid;
